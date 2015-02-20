@@ -45,7 +45,7 @@ You can easily check the status of the apps using the command:
 ```
 supervisorctl status
 ```
-You can stop the both apps at once with:
+You can stop both apps at once with:
 
 ```
 supervisorctl stop all
