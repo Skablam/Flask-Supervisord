@@ -57,11 +57,59 @@ You can stop each individual app with:
 supervisorctl stop flaskapp1
 ```
 
+Or you can stop a list of apps:
+
+```
+supervisorctl stop flaskapp1 flaskapp2
+```
+
 The same goes for starting and restarting:
 
 ```
 supervisorctl start flaskapp2
 supervisorctl restart flaskapp2
+```
+
+You can also visit http://localhost:9001 to see the apps status, as well as a visual way to start and stop the apps.
+
+If you get bored with typing supervisorctl every time, I have added the following supervisorctl aliases:
+
+```
+alias start='supervisorctl start'
+alias stop='supervisorctl stop'
+alias restart='supervisorctl restart'
+alias status='supervisorctl status'
+```
+
+So start apps with:
+
+```
+start flaskapp1
+start all
+start flaskapp1 flaskapp2
+```
+
+Stop apps with:
+
+```
+stop flaskapp1
+stop all
+stop flaskapp1 flaskapp2
+```
+
+Restart with:
+
+```
+restart flaskapp1
+restart all
+restart flaskapp1 flaskapp2
+```
+
+Check status with:
+```
+status flaskapp1
+status all
+status flaskapp1 flaskapp2
 ```
 
 ###App Error and Log information

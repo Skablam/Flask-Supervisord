@@ -44,3 +44,11 @@ cd /vagrant
 mkdir /vagrant/logs
 
 supervisord
+
+#set up some supervisorctl aliases
+echo "alias start='supervisorctl start'" >> /etc/profile.d/supervisorctl.sh
+echo "alias stop='supervisorctl stop'" >> /etc/profile.d/supervisorctl.sh
+echo "alias restart='supervisorctl restart'" >> /etc/profile.d/supervisorctl.sh
+echo "alias status='supervisorctl status'" >> /etc/profile.d/supervisorctl.sh
+
+source /etc/profile.d/supervisorctl.sh
